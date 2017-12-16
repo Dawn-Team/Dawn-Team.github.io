@@ -1,63 +1,107 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet" />
-		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="icon" href="favicon.ico" />
-		<title>Dawn-Team & Recruiment</title>
-	</head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="icon" href="favicon.ico"/>
+    <title>Dawn-Team & Recruiment</title>
+</head>
 
-	<body>
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header" style="margin-top: 0.5em">
-					<a class="navbar-brand" href="./">
-						<img class="img-rounded" src="logo.png" style="height: 2.5em; margin-top: -1em;" alt="Brand" />
-					</a>
-					<a class="navbar-brand" href="./" style="font-size: x-large">
-						<ruby th:inline="text">
-                    	Dawn-Team
-               			</ruby>
-					</a>
+<body>
+<!--modal templates-->
+<div id="modalDiaglog" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <a href="#" style="margin-top: 1em;margin-right: 0.6em;font-size: x-large;color: red" class="pull-right"
+               data-dismiss="modal">
+                <span class="glyphicon glyphicon-remove-sign" aria-label="Close"></span>
+            </a>
+            <div class="modal-header" data-purpose="placeholder" style="margin-top: 0.5em;">
+                <span style="font-size: x-large;font-weight: bold;">What are we stepping forward to?</span>
+            </div>
+            <div class="modal-body">
+                <div class="row" data-purpose="placeholder">
+                    <div class="col-sm-12">
+                        <h1>Machine Learning.</h1>
+                        <p>
+                            We are catching up the steps as most of the campuses, research agencies and companies do.
+                        </p>
+                        <p>
+                            And we begin our journey from steps.
+                        </p>
+                        <p>
+                            If you answered our question positively, I am sure you can find something useful either
+                            <a class="btn btn-warning"
+                               href="https://gitter.im/Dawn-Team-Gitter/Contribution?utm_source=share-link&utm_medium=link&utm_campaign=share-link">
+                                <img style="height: 1.5em;" src="imgs/gitter.svg"/> Here
+                            </a>
+                            or
+                            <a class="btn btn-warning"
+                               href="mailto:service@mail.arvinsichuan.com?subject=I%20Want%to%Contribute">
+                                <img style="height: 1.5em;" src="imgs/mail-list.svg"/> Service@mail.arvinsichuan.com</a>
+                        </p>
+                        <p style="font-weight: bold;">
+                            Please feel free to talk to us!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" data-purpose="placeholder" hidden="hidden">
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header" style="margin-top: 0.5em">
+            <a class="navbar-brand" href="./">
+                <img class="img-rounded" src="logo.png" style="height: 2.5em; margin-top: -1em;" alt="Brand"/>
+            </a>
+            <a class="navbar-brand" href="./" style="font-size: x-large">
+                <ruby>
+                    Dawn-Team
+                </ruby>
+            </a>
 
-				</div>
-				<!--collapse-->
-			</div>
-			<!--container-fluid-->
-		</nav>
+        </div>
+        <!--collapse-->
+    </div>
+    <!--container-fluid-->
+</nav>
 
-		<div class="container" style="margin-top: 8em">
-			<section class="content-wrap">
-				<div class="col-sm-12" style="margin-bottom: 1em">
-					<div class="row" style="font-size: xx-large;font-weight: bold;">
-						<blockquote style="font-size: xx-large;font-weight: bold;">
-							<p style="margin-left: 0.45em;"><span style="margin-left: -0.75em;">" </span>We are the misfits, the rebels, the troublemakers,</p>
-							<p style="margin-left: 0.45em;"> the round pegs in the square holes</p>
-							<p style="margin-left: 0.45em;"> and we are crazy enough to think</p>
-							<p style="margin-left: 0.45em;"> we can change the world", </p>
-							<p style="margin-left: 0.45em;">
-								<a href="#" style="text-decoration: none;">so are you?</a>
-							</p>
+<div class="container" style="margin-top: 8em">
+    <section class="content-wrap">
+        <div class="col-sm-12" style="margin-bottom: 1em">
+            <div class="row" style="font-size: xx-large;font-weight: bold;">
+                <blockquote style="font-size: xx-large;font-weight: bold;">
+                    <p style="margin-left: 0.45em;"><span style="margin-left: -0.75em;">" </span>We are the misfits, the
+                        rebels, the troublemakers,</p>
+                    <p style="margin-left: 0.45em;"> the round pegs in the square holes</p>
+                    <p style="margin-left: 0.45em;"> and we are crazy enough to think</p>
+                    <p style="margin-left: 0.45em;"> we can change the world", </p>
+                    <p style="margin-left: 0.45em;">
+                        <a id="SoAreYou" href="#" style="text-decoration: none;">so are you?</a>
+                    </p>
 
-						</blockquote>
+                </blockquote>
 
-					</div>
-					<div class="row">
+            </div>
+            <div class="row">
 
-					</div>
-				</div>
-			</section>
+            </div>
+        </div>
+    </section>
 
-			<footer class="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12">
-							<a href="https://github.com/Dawn-Team" style="font-size: large;">
-								<svg style="height: 1em;" version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="https://github.com/Dawn-Team" style="font-size: large;">
+                        <svg style="height: 1em;" version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
 									<path fill-rule="evenodd" clip-rule="evenodd" fill="#000000" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
 				                c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
 				                c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
@@ -68,20 +112,27 @@
 				                c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
 				                c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path>
 								</svg>
-								Dawn-Team
-							</a>
-						</div>
-						<div class="col-sm-12" style="font-size: large;">
-							<a href="mailto:arvinsichuan@mail.arvinsichuan.com?subject=I Have%20Questions%20about%20Dawn-Team">
-								Arvinsichuan@mail.arvinsichuan.com
-							</a>
-						</div>
-					</div>
-				</div>
-			</footer>
-	</body>
+                        Dawn-Team
+                    </a>
+                </div>
+                <div class="col-sm-12" style="font-size: large;">
+                    <a href="mailto:arvinsichuan@mail.arvinsichuan.com?subject=I Have%20Questions%20about%20Dawn-Team">
+                        Service@mail.arvinsichuan.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
 
-	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#SoAreYou").click(function () {
+            $(".modal").modal('show');
+        });
+    })
+</script>
 </html>
