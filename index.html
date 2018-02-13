@@ -72,10 +72,9 @@
         <!--collapse-->
         <div class="collapse navbar-collapse pull-right" style="margin-top: 0.5em">
             <ul class="nav navbar-nav">
-                <li><a href="https://hub.dawn-team.online:39132">Jupyter Platform</a></li>
-                <!-- <li><a href="https://hub.dawn-team.online:8443">Jupyter Platform</a></li> -->
+                <li id="jupyter-platform"><a href="https://hub.dawn-team.online:39132">Jupyter Platform</a></li>
 
-                <li><a href="http://mailservice.arvinsichuan.com">WebMail Platform</a></li>
+                <li id="webmail-platform"><a href="http://mailservice.arvinsichuan.com">WebMail Platform</a></li>
             </ul>
         </div>
         <!--collapse end-->
@@ -143,6 +142,59 @@
         $("#SoAreYou").click(function () {
             $(".modal").modal('show');
         });
-    })
+        $.ajax({
+            url: "./data/jupyter-platform.json",
+            type: "GET",
+            async: true,
+            dataType: "json",
+            success: function (data) {
+                let $jupyter=$("#jupyter-platform");
+                let url = data.supported_protocol.toLowerCase()+"://"+data.host_address+":"+data.avaliable_port;
+                $jupyter.children("a").attr("href",url);
+                //requestStatus(url);
+            },
+            error: function (data) {
+                console.log(data)
+            }
+        });
+
+        $.ajax({
+            url: "./data/webmail-platform.json",
+            type: "GET",
+            async: true,
+            dataType: "json",
+            success: function (data) {
+                let $jupyter=$("#webmail-platform");
+                let url = data.supported_protocol.toLowerCase()+"://"+data.host_address+":"+data.avaliable_port;
+                $jupyter.children("a").attr("href",url);
+                //requestStatus(url);
+            },
+            error: function (data) {
+                console.log(data)
+            }
+        });
+    });
+
+    function requestStatus(url) {
+        $.ajax({
+            url: url,
+            type: "GET",
+            async: true,
+            dataType: "text/html",
+            timeout:30000,
+            headers:{
+                "Access-Control-Allow-Origin":"*"
+            },
+            success: function (data) {
+                if (data.status === 200){
+                    alert("OK")
+                }
+                console.log(data.status)
+            },
+            error: function (data) {
+                console.log(data)
+            }
+        });
+    }
 </script>
 </html>
