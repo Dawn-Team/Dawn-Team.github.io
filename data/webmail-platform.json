@@ -1,0 +1,7 @@
+{
+  "host_name":"webmail@mail.arvinsichuan.com",
+  "host_address":"mailservice.arvinsichuan.com",
+  "avaliable_port":"80",
+  "supported_protocol":"HTTP",
+  "update-date":"13-Feb-2018"
+}
