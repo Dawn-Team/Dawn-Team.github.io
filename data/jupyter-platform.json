@@ -1,3 +1,4 @@
+// **Notice: ** After data update, the same conf should be done at both *Github.com* and *jupyter platform.*
 {
   "host_name":"jupyter@arvin-linux-PC",
   "host_address":"hub.dawn-team.online",
