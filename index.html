@@ -142,29 +142,24 @@
         $("#SoAreYou").click(function () {
             $(".modal").modal('show');
         });
-        $.ajax({
-            url: "./data/jupyter-platform.json",
-            type: "GET",
-            async: true,
-            dataType: "json",
-            success: function (data) {
-                let $jupyter=$("#jupyter-platform");
-                let url = data.supported_protocol.toLowerCase()+"://"+data.host_address+":"+data.avaliable_port;
-                $jupyter.children("a").attr("href",url);
-                //requestStatus(url);
-            },
-            error: function (data) {
-                console.log(data)
-            }
-        });
 
+
+        // update connection data for jupyter
+        requestPlatformData("./data/jupyter-platform.json",$("#jupyter-platform"));
+
+        // update webmial data
+        requestPlatformData("./data/webmail-platform.json",$("#webmail-platform"));
+
+    });
+
+    function requestPlatformData(url,$elementToUpdate) {
         $.ajax({
-            url: "./data/webmail-platform.json",
+            url: url,
             type: "GET",
             async: true,
             dataType: "json",
             success: function (data) {
-                let $jupyter=$("#webmail-platform");
+                let $jupyter=$elementToUpdate;
                 let url = data.supported_protocol.toLowerCase()+"://"+data.host_address+":"+data.avaliable_port;
                 $jupyter.children("a").attr("href",url);
                 //requestStatus(url);
@@ -173,7 +168,7 @@
                 console.log(data)
             }
         });
-    });
+    }
 
     function requestStatus(url) {
         $.ajax({
