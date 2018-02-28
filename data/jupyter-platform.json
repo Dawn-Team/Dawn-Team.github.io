@@ -2,7 +2,7 @@
   "!_comment":"**Notice: ** After data update, the same conf should be done at both *Github.com* and *jupyter platform.*",
   "host_name":"jupyter@arvin-linux-PC",
   "host_address":"hub.dawn-team.online",
-  "avaliable_port":"12528",
+  "avaliable_port":"8888",
   "supported_protocol":"HTTPS",
-  "update-date":"13-Feb-2018"
+  "update-date":"28-Feb-2018"
 }
