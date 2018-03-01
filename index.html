@@ -168,7 +168,7 @@
                 let $jupyter=$elementToUpdate;
                 let url = data.supported_protocol.toLowerCase()+"://"+data.host_address+":"+data.avaliable_port;
                 $jupyter.children("a").attr("href",url);
-                requestStatus("https://hub.dawn-team.online:8888/hub/login");
+                //requestStatus("https://hub.dawn-team.online:8888/hub/login");
             },
             error: function (data) {
                 console.log(data)
