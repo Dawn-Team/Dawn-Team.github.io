@@ -78,9 +78,9 @@
         <!--collapse-->
         <div id="nav_menus" class="collapse navbar-collapse pull-right" style="margin-top: 0.5em">
             <ul class="nav navbar-nav">
-                <li id="jupyter-platform"><a href=".">Jupyter Platform</a></li>
+                <li id="jupyter-platform" class="disabled"><a href=".">Jupyter Platform</a></li>
 
-                <li id="webmail-platform"><a href=".">WebMail Platform</a></li>
+                <li id="webmail-platform" class="disabled"><a href=".">WebMail Platform</a></li>
             </ul>
         </div>
         <!--collapse end-->
@@ -165,9 +165,10 @@
             async: true,
             dataType: "json",
             success: function (data) {
-                let $jupyter=$elementToUpdate;
+                let $ele=$elementToUpdate;
                 let url = data.supported_protocol.toLowerCase()+"://"+data.host_address+":"+data.avaliable_port;
-                $jupyter.children("a").attr("href",url);
+                $ele.children("a").attr("href",url);
+                $ele.removeClass("disabled");
                 //requestStatus("https://hub.dawn-team.online:8888/hub/login");
             },
             error: function (data) {
