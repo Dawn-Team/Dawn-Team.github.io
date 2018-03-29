@@ -1,0 +1,33 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!--Brand -->
+    <a class="navbar-brand" routerLink="/">
+      <img class="img-rounded" src="assets/imgs/logo-low.png" style="height: 2.5em;" alt="Brand"/>
+    </a>
+    <a class="navbar-brand" routerLink="/" style="font-size: x-large">
+      <ruby>
+        <rt *ngIf="websiteSubName?.length>0">{{websiteSubName}}</rt>
+        {{websiteMainName}}
+      </ruby>
+    </a>
+
+    <!--Collapse Button-->
+    <button class="navbar-toggler" type="button" (click)="navbarCollapsed = ! navbarCollapsed"
+            [attr.aria-expanded]="!navbarCollapsed" aria-controls="nav-menus" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--collapse-->
+    <div id="nav-menus" [ngbCollapse]="navbarCollapsed" class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <!--nav bar left buttons-->
+      </ul>
+
+      <ul class="form-inline my-2 my-lg-0">
+        <app-platform-status></app-platform-status>
+      </ul>
+    </div>
+    <!--collapse end-->
+  </div>
+</nav>

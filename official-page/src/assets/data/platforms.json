@@ -1,0 +1,20 @@
+[
+  {
+    "comment": "**Notice: ** After data update, the same conf should be done at both *Github.com* and *jupyter platform.*",
+    "platformName": "Jupyter Platform",
+    "hostName": "jupyter@arvin-linux-PC",
+    "hostAddress": "hub.dawn-team.online",
+    "availablePort": "8888",
+    "supportedProtocol": "HTTPS",
+    "updateDate": "28-Feb-2018"
+  },
+  {
+    "platformName": "Webmail Platform",
+    "hostName": "webmail@mail.arvinsichuan.com",
+    "hostAddress": "mailservice.arvinsichuan.com",
+    "availablePort": "80",
+    "supportedProtocol": "HTTP",
+    "updateDate": "13-Feb-2018",
+    "comment": ""
+  }
+]

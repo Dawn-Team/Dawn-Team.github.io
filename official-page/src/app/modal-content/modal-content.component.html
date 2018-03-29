@@ -1,0 +1,10 @@
+<div class="modal-header" *ngIf="title?.length>0">
+  <h4 class="modal-title">{{title}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body" *ngIf="content?.length>0" [innerHTML]="content">
+</div>
+<div class="modal-footer" *ngIf="footer?.length>0" [innerHTML]="footer">
+</div>
