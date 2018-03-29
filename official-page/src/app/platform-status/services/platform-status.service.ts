@@ -17,7 +17,7 @@
  */
 
 import {Injectable} from '@angular/core';
-import {WebApiService} from "../../services/web-api.service";
+import {WebApiService} from "../../base-services/web-api.service";
 import {log} from "util";
 import {Observable} from "rxjs/Observable";
 import {PlatformStatus} from "../beans/platform-status";

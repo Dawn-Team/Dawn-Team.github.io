@@ -22,7 +22,7 @@ import {of} from "rxjs/observable/of";
 import {LogLevel, LogService} from './log.service';
 
 
-const WEB_API_BASE_URL: string = 'https://dawn-team.github.io/data/';
+const WEB_API_BASE_URL: string = 'https://dawn-team.github.io/';
 
 @Injectable()
 export class WebApiService {
