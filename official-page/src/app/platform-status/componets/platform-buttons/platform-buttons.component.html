@@ -1,0 +1,15 @@
+<ng-template #tipContent>{{tooltipText}}</ng-template>
+<span [ngbTooltip]="tipContent" class="help-tooltip">
+<a class="btn"
+   [class.btn-outline-warning]="status=='loading'"
+   [class.btn-outline-danger]="status=='offline'"
+   [class.btn-outline-success]="status=='ready'"
+   [attr.href]="link" [class.disabled]="status!='ready'">
+  <i class="fas"
+     [class.fa-spinner]="status=='loading'"
+     [class.fa-exclamation-circle]="status=='offline'"
+     [class.fa-spin]="status=='loading'"
+     [class.fa-check-circle]="status=='loaded' || status=='ready'"></i>
+  {{platformStatus.platformName}}
+</a>
+</span>
