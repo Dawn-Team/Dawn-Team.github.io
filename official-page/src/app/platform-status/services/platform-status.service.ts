@@ -1,6 +1,5 @@
 /*
- *     This project is one of projects of ArvinSiChuan.com.
- *     Copyright (C) 2018, ArvinSiChuan.com <https://arvinsichuan.com>.
+ *     Copyright (C) 2018, Dawn team<https://github.com/Dawn-Team>.
  *
  *     This program is free software: you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by

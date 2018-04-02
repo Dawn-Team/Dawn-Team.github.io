@@ -1,3 +1,20 @@
+/*
+ *     Copyright (C) 2018, Dawn team<https://github.com/Dawn-Team>.
+ *
+ *     This program is free software: you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation, either version 3 of the License, or
+ *     (at your option) any later version.
+ *
+ *     This program is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU General Public License for more details.
+ *
+ *     You should have received a copy of the GNU General Public License
+ *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import {PlacementArray} from "@ng-bootstrap/ng-bootstrap/util/positioning";
 import {NgbTooltipConfig} from "@ng-bootstrap/ng-bootstrap";
@@ -24,13 +41,12 @@ export class PlatformButtonsComponent implements OnInit, OnChanges {
   }
 
   ngOnInit() {
-
   }
 
   ngOnChanges() {
     // TODO, hard code, need to add detect mechanism
     this._status = "ready";
-    this._tooltipText='Platform is now READY';
+    this._tooltipText = 'Platform is now READY';
   }
 
 
@@ -50,7 +66,6 @@ export class PlatformButtonsComponent implements OnInit, OnChanges {
     this._status = value;
   }
 
-
   get tooltipText(): string {
     return this._tooltipText;
   }
@@ -62,7 +77,6 @@ export class PlatformButtonsComponent implements OnInit, OnChanges {
   get link(): string {
     return this.platformStatus.supportedProtocol.toString().toLowerCase() + "://" + this.platformStatus.hostAddress + ":" + this.platformStatus.availablePort;
   }
-
 
 }
 
