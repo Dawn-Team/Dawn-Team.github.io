@@ -1,3 +1,4 @@
 # IDE profiles
 .idea/*
 *.iml
+/.idea/
