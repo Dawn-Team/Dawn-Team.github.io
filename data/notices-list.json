@@ -3,6 +3,5 @@
   "<li>The GPU resources is a kind of exclusive resources, you may get a `dead kernel` if you're trying to use it while it is used by someone.</li>",
   "<li>You should be aware that your server may be stopped if it's detected idle.</li>",
   "<li>You can request a package installation at <a href='https://github.com/Dawn-Team/JupyterDocker/issues'>here</a></li>",
-  "<li>All tutorial files are put into the directory <code>Tutorials</code> in read only mode.</li>",
-  "<li>Default terminal is switched to <code>bash</code> but the displayed information is incomplete, you may want to fix it with command <code>bash</code></li>"
+  "<li>All tutorial files are put into the directory <code>Tutorials</code> in read only mode.</li>"
 ]
