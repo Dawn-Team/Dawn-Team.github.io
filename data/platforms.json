@@ -4,7 +4,7 @@
     "platformName": "Jupyter Platform",
     "hostName": "jupyter@arvin-linux-PC",
     "hostAddress": "hub.dawn-team.online",
-    "availablePort": "19020",
+    "availablePort": "443",
     "supportedProtocol": "HTTPS",
     "updateDate": "28-Feb-2018"
   },
