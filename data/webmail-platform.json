@@ -1,9 +1,0 @@
-{
-  "platform-name":"Webmail Platform",
-  "host-name":"webmail@mail.arvinsichuan.com",
-  "host-address":"mailservice.arvinsichuan.com",
-  "available-port":"80",
-  "supported-protocol":"HTTP",
-  "update-date":"13-Feb-2018",
-  "comment":""
-}
