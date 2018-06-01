@@ -1,5 +1,5 @@
 [
-  "<li>You can try the new lab ui by using <code>/user/{your_name}/lab</code> url.</li>",
+  "<li>The UI now is switched to lab ui by default.</li>",
   "<li>The GPU resources is a kind of exclusive resources, you may get a `dead kernel` if you're trying to use it while it is used by someone.</li>",
   "<li>You should be aware that your server may be stopped if it's detected idle.</li>",
   "<li>You can request a package installation at <a href='https://github.com/Dawn-Team/JupyterDocker/issues'>here</a></li>",
